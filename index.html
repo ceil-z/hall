@@ -3,7 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>display</title>
+    <title>王者</title>
+    <style>
+        /* 元素选择器 */
+        p{
+            color: palegreen;
+            font-size: 16px;
+        }
+
+        h2{
+            color: cadetblue;
+        }
+        /* 类选择器 */
+        .highlight{
+            background-color: darkgreen;
+        }
+        /* id选择器 */
+        #deep{
+            background-color: chocolate;
+        }
+        /* 通用选择器 */
+        *{
+            font-family: kaiTi;
+        }
+        /* 子元素选择器 */
+        .father > .son{
+            font-weight: bolder;
+        }
+        /* 后代选择器 */
+        .father p{
+            font-size: large;
+        }
+        /* 相邻元素选择器 */
+        h3 + p{
+            color: darkmagenta;
+        }
+        /* 伪类选择器 */
+        #fake:hover{
+            background-color: red;
+        }
+        /* 盒子模型 */
+        .box{
+            display: inline-block;
+            background-color: aliceblue;
+            /* 边框 */
+            border: 2px;
+            /* 内边距 */
+            padding: 50px;
+            /* 外边距 */
+            margin: 30px;
+        }
+        #t1{
+            display: inline-block;
+            background-color: bisque;
+            /* 边框 */
+            border: 2px;
+            /* 内边距 */
+            padding: 50px;
+            /* 外边距 */
+            margin: 50px;
+        }
+        /* 浮动 */
+        .float{
+            background-color: grey;
+            overflow: hidden;
+        }
+        #f1{
+            background-color: wheat;
+            float: left;
+            width: 50px;
+            height: 50px;
+        }
+        #f2{
+            background-color: wheat;
+            float: right;
+            width: 50px;
+            height: 50px;
+        }
+        /* 定位 */
+        .rela-box{
+            background-color: chartreuse;
+            height: 350px;
+        }
+        .normal{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+        }
+        /* 相对 */
+        .relative{
+            width: 100px;
+            height: 100px;
+            background-color: rebeccapurple;
+            position: relative;
+            left: 200px;
+            right: ;
+            top: ;
+            bottom: ;
+        }
+        .abso-box{
+            background-color: rgb(255, 0, 242);
+            height: 350px;
+        }
+        /* 绝对 */
+        .absolute{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(153, 141, 51);
+            position: absolute;
+            left: 200px;
+        }
+        /* 固定 */
+        .fixed{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(51, 153, 119);
+            position: fixed;
+            right: 0px;
+            top: 100px;
+        }
+    </style>
 </head>
 <body>
     <h1>常见文本标签</h1>
@@ -45,12 +164,12 @@
         </tr>
     </table>
     <h1>属性学习</h1>
-    <a href="https://webhall-4jjsj01f1.maozi.io/" target="_blank">王者的链接https://webhall-4jjsj01f1.maozi.io/</a>
+    <a href="https://https://www.libvios.com/" target="_self">免费电影</a>
     <hr>
     <img src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAET749p-12WNOTKbqEgumvcCUOxpiOtSwAC9yMAAp0i2FdIjcH-h9xNSDsE.png" alt="error" />
     <h1>块的学习</h1>
     <div class="link">
-        <a href="https://webhall-4jjsj01f1.maozi.io/">王者的ai </a>
+        <a href="https://baidu.com">百度</a>
     </div>
     <span>span设置样式和标记</span>
     <h1>表单学习</h1>
@@ -74,5 +193,57 @@
         <input type="checkbox" name="hobby"> 乒乓球
         <input type="checkbox" name="hobby"> 学习
     </form>
+    <hr>
+    <p>css样式文本</p>
+    <h1 style="color: aqua;">内联样式</h1>
+    <h2>内部样式</h2>
+    <!-- <h3>外部样式</h3> -->
+    <h2 class="highlight">类选择器</h2>
+    <h2 id="deep">id选择器</h2>
+    <div class="father">
+        <p class="son">子元素选择器</p>
+        <div class="grandson">
+            <p>后代选择器</p>
+        </div>
+    </div>
+    <p>普通p标签</p>
+    <h3>与p相邻的h3标签</h3>
+
+    <h1 id="fake">伪类选择器</h1>
+
+    <h1 style="font: bolder 50px 'kaiTi';"">font复合属性</h1>
+    <span style="line-height: 40px;">1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+        1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+        1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+        1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+        1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</span>
+    <h1>display</h1>
+    <span id="fake" style="display: inline-block;width: 200px;height: 200px;">行内元素转行内块元素</span>
+    <br>
+    <div style=" background-color: gold;border: 5px solid palevioletred;width: 100px;height: 100px;">边框</div>
+    <div class="box">盒子模型</div>
+    <div class="find">
+        <p id="t1">盒子</p>
+    </div>
+    <div class="float">
+        <p id="f1">左浮动</p>
+        <p id="f2">右浮动</p>
+    </div>
+    <h1>相对定位</h1>
+    <div class="rela-box">
+        <div class="normal"></div>
+        <div class="relative">RELATIVE</div>
+        <div class="normal"></div>
+    </div>
+    <h1>绝对定位</h1>
+    <div class="abso-box">
+        <div class="normal"></div>
+        <div class="absolute">ABSOLUTE</div>
+        <div class="normal"></div>
+    </div>
+    <h1>固定定位</h1>
+        <div class="fixed">FIXED</div>
+    <h1>DONE!</h1>
+    <br><br><br><br>
 </body>
 </html>
